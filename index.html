@@ -7,8 +7,8 @@
   <meta name="description" content="AGS Talent – lộ trình Tú tài Úc SACE tại Trường Nam Úc Scotch AGS. Sư tử trỗi dậy – Khơi dưỡng nội lực trong con.">
   <link rel="preload" href="fonts/SVN-UltraStandard-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/SVN-Apercu-Pro-Light.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/banner.jpg" as="image">
-  <link rel="stylesheet" href="css/styles.css?v=32">
+  <link rel="preload" as="image" href="assets/banner-1600.webp" imagesrcset="assets/banner-800.webp 800w, assets/banner-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="css/styles.css?v=37">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
@@ -37,7 +37,7 @@
     <!-- ============ BANNER ============ -->
     <section class="banner" aria-label="Sư tử trỗi dậy – Khơi dưỡng nội lực trong con">
       <div class="banner__media">
-        <img src="assets/banner.jpg" alt="Học sinh Nam Úc Scotch AGS – Sư tử trỗi dậy, khơi dưỡng nội lực trong con" width="1600" height="593">
+        <img src="assets/banner-1600.webp" srcset="assets/banner-800.webp 800w, assets/banner-1600.webp 1600w" sizes="100vw" alt="Học sinh Nam Úc Scotch AGS – Sư tử trỗi dậy, khơi dưỡng nội lực trong con" width="1600" height="593" fetchpriority="high" decoding="async">
       </div>
     </section>
 
@@ -48,12 +48,12 @@
         <div class="intro__row">
           <p class="body-18" data-reveal="fly-left">Trường Nam Úc Scotch AGS kế thừa tinh hoa giáo dục hơn 100 năm từ Scotch College Adelaide, mang đến môi trường học tập chuẩn quốc tế với chương trình giáo dục Quốc gia Úc và triết lý The Rising Lion - Khơi dưỡng nội lực trong mỗi học sinh.</p>
           <figure class="intro__img zoom-frame" data-reveal="fly-right">
-            <img src="assets/intro-campus.jpg" alt="Scotch College Adelaide" loading="lazy" style="object-position:bottom">
+            <img src="assets/intro-campus-1000.webp" srcset="assets/intro-campus-700.webp 700w, assets/intro-campus-1000.webp 1000w" sizes="(max-width: 960px) calc(100vw - 32px), 500px" width="1000" height="563" alt="Scotch College Adelaide" fetchpriority="high" decoding="async" style="object-position:bottom">
           </figure>
         </div>
         <div class="intro__row intro__row--reverse">
           <figure class="intro__img zoom-frame" data-reveal="fly-left">
-            <img src="assets/intro-class.jpg" alt="Học sinh AGS Talent trong lớp học" loading="lazy">
+            <img src="assets/intro-class-1000.webp" srcset="assets/intro-class-700.webp 700w, assets/intro-class-1000.webp 1000w" sizes="(max-width: 960px) calc(100vw - 32px), 500px" width="1000" height="666" alt="Học sinh AGS Talent trong lớp học" loading="lazy" decoding="async">
           </figure>
           <p class="body-18" data-reveal="fly-right">AGS Talent là lộ trình Tú tài Úc SACE dành cho học sinh có năng lực học thuật cao và động lực học tập rõ ràng. Từ Lớp 10, con được khám phá thế mạnh qua môn học, dự án nghiên cứu và định hướng ngành; được hỗ trợ xây nền tảng ATAR, tiếng Anh học thuật và hồ sơ riêng; đồng thời rèn giao tiếp, nhân cách và khả năng tự quản để sẵn sàng chinh phục đại học mơ ước.</p>
         </div>
@@ -69,27 +69,47 @@
     <!-- ============ WHY AGS TALENT ============ -->
     <section class="section why" id="why">
       <div class="container container--1360">
-        <h2 class="h-section" data-reveal>Vì sao nên chọn AGS Talent<br>tại Nam Úc Scotch AGS?</h2>
-        <div class="why__grid" data-m-slider>
+        <h2 class="h-section" data-reveal>Vì sao nên chọn <span class="accent">AGS Talent từ lớp 10?</span></h2>
+        <div class="why__grid" data-m-slider data-carousel>
           <article class="feature-card" data-reveal style="--d:0">
-            <div class="feature-card__icon"><img src="assets/ic-diploma.svg" alt="" width="80" height="80"></div>
-            <h3 class="feature-card__title">Bằng tốt nghiệp<br>có giá trị toàn cầu</h3>
-            <p class="body-18">SACE là bằng Tú tài chính thức của Chính phủ bang Nam Úc, được công nhận bởi tất cả các Đại học tại Úc và nhiều Đại học hàng đầu thế giới.</p>
+            <div class="feature-card__icon"><img src="assets/why/khoi-duong-noi-luc.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Khơi dưỡng nội lực</span><br> Mô hình phát triển toàn diện</h3>
+            <p class="body-18">Mô hình Rising Lion phát triển học sinh qua 3 tầng: <strong>Nội lực vững vàng, Tiếng nói cá nhân và Lãnh đạo bền vững</strong>, giúp các em bồi đắp nhân cách, tự tin thể hiện chính kiến và từng bước làm chủ tương lai.</p>
           </article>
           <article class="feature-card" data-reveal style="--d:1">
-            <div class="feature-card__icon"><img src="assets/ic-school.svg" alt="" width="80" height="80"></div>
-            <h3 class="feature-card__title">Lộ trình tinh gọn,<br>bám sát thực tế</h3>
-            <p class="body-18">Từ Lớp 10, học sinh được định hướng theo 1 trong 4 nhóm chuyên ngành: Kỹ thuật, Kinh doanh/Khoa học xã hội, Y khoa và Nghệ thuật, giúp các em phát huy năng lực học thuật theo lĩnh vực mình có thế mạnh.</p>
+            <div class="feature-card__icon"><img src="assets/why/dinh-huong-dai-hoc.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Định hướng đại học từ sớm</span><br> Khám phá thế mạnh qua Uni-Prep</h3>
+            <p class="body-18">Thông qua các dự án nghiên cứu và công cụ định hướng từ lớp 10, học sinh chủ động tìm hiểu ngành học, quốc gia và trường đại học phù hợp, đồng thời khám phá năng lực, sở thích trước khi lựa chọn lộ trình chuyên sâu.</p>
           </article>
           <article class="feature-card" data-reveal style="--d:2">
-            <div class="feature-card__icon"><img src="assets/ic-grad.svg" alt="" width="70" height="57" style="width:87.5%;height:71.9%"></div>
-            <h3 class="feature-card__title">Rút ngắn thời gian<br>học Đại học</h3>
-            <p class="body-18">Bên cạnh SACE, chương trình tích hợp các môn Pre-Uni để học sinh làm quen sớm với phương pháp học Đại học và có cơ hội miễn giảm tín chỉ lên đến 8 môn, qua đó rút ngắn đến 1 năm Đại học và tiết kiệm khoảng 1,5 tỷ đồng chi phí du học.</p>
+            <div class="feature-card__icon"><img src="assets/why/ca-nhan-hoa-lo-trinh.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Cá nhân hóa lộ trình học</span><br> Thứ hạng ATAR vượt trội</h3>
+            <p class="body-18">Từ học kỳ 2 Lớp 10, học sinh được định hướng lựa chọn môn học theo <strong>4 nhóm ngành chuyên sâu</strong>, phù hợp với thế mạnh và mục tiêu đại học, nhằm phát huy tối đa tiềm năng học thuật và tối ưu kết quả ATAR.</p>
           </article>
           <article class="feature-card" data-reveal style="--d:3">
-            <div class="feature-card__icon"><img src="assets/ic-globe.svg" alt="" width="80" height="80"></div>
-            <h3 class="feature-card__title">Chuẩn bị tư duy và<br>kỹ năng du học</h3>
-            <p class="body-18">Mỗi học sinh được đồng hành bởi cố vấn học tập riêng, kết hợp công cụ đánh giá khoa học và trải nghiệm học thử định kỳ cùng các Đại học quốc tế, từ đó xây dựng chiến lược hồ sơ, học bổng và ứng tuyển hướng đến Dream University phù hợp nhất.</p>
+            <div class="feature-card__icon"><img src="assets/why/lo-trinh-tang-toc.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Lộ trình tăng tốc 2.5+0.5</span><br> Chủ động chuẩn bị cho đại học</h3>
+            <p class="body-18">AGS Talent thiết kế lộ trình 3 năm, trong đó học sinh hoàn thành Tú tài Úc SACE trong <strong>2,5 năm</strong> và dành <strong>6 tháng linh hoạt</strong> cho các môn tiền đại học, chuẩn bị hành trang chuyển tiếp lên bậc học cao hơn.</p>
+          </article>
+          <article class="feature-card" data-reveal style="--d:3">
+            <div class="feature-card__icon"><img src="assets/why/rut-ngan-dai-hoc.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Rút ngắn 1 năm đại học</span><br> Tối ưu 1,5 Tỷ chi phí du học</h3>
+            <p class="body-18">Thông qua các môn chuyển tiếp đại học, học sinh có cơ hội được <strong>miễn giảm tối đa 8 môn</strong>, tùy theo trường và ngành học, giúp rút ngắn thời gian đại học và tối ưu đáng kể chi phí học tập, sinh hoạt tại Úc.</p>
+          </article>
+          <article class="feature-card" data-reveal style="--d:3">
+            <div class="feature-card__icon"><img src="assets/why/nang-luc-thuc-tien.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Trang bị năng lực thực tiễn</span><br> Cạnh tranh thế hệ mới</h3>
+            <p class="body-18"><strong>Tư duy kinh doanh (Business Mindset)</strong> được xây dựng thông qua các môn nền tảng như Quản trị, Marketing, Kế toán và Kinh tế học xuyên suốt để hình thành tư duy giải quyết vấn đề thực tiễn ứng dụng cho mọi ngành nghề trong tương lai.</p>
+          </article>
+          <article class="feature-card" data-reveal style="--d:3">
+            <div class="feature-card__icon"><img src="assets/why/cong-nghe-ai.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Làm chủ công nghệ và AI</span><br> Sẵn sàng cho tương lai số</h3>
+            <p class="body-18">Môn học <strong>Digital Technology</strong> giúp học sinh trang bị tư duy số, khả năng ứng dụng công nghệ và công cụ AI trong học tập, nghiên cứu và sáng tạo, từng bước phát triển năng lực thích nghi với thị trường lao động hiện đại.</p>
+          </article>
+          <article class="feature-card" data-reveal style="--d:3">
+            <div class="feature-card__icon"><img src="assets/why/ho-so-nang-luc.webp" alt="" width="80" height="80" loading="lazy"></div>
+            <h3 class="feature-card__title"><span class="accent">Hồ sơ năng lực nổi bật</span><br> Gia tăng lợi thế ứng tuyển đại học</h3>
+            <p class="body-18">Với sự cố vấn xuyên suốt, học sinh xây dựng <strong>Portfolio mang dấu ấn cá nhân</strong> thông qua dự án nghiên cứu, cuộc thi học thuật và hoạt động ngoại khóa có chọn lọc, tạo minh chứng rõ nét về năng lực và thành tích của bản thân.</p>
           </article>
         </div>
       </div>
@@ -103,7 +123,7 @@
           <article class="hero-stat" data-reveal="left">
             <p class="hero-stat__num"><span data-count="100">0</span><small>%</small></p>
             <p class="hero-stat__label">Học sinh trúng tuyển đại học <br>danh tiếng thế giới</p>
-            <div class="marquee" aria-label="Các đại học đối tác">
+            <div class="marquee" role="group" aria-label="Các đại học đối tác">
               <div class="marquee__track" id="uni-track"></div>
             </div>
           </article>
@@ -142,7 +162,7 @@
       <div class="portrait__row">
         <div class="portrait__figure" data-reveal="up">
           <div class="portrait__halo" aria-hidden="true"></div>
-          <div class="portrait__crop"><img src="assets/portrait-student-v2.png" alt="Học sinh AGS Talent với hình bóng sư tử sau lưng" width="713" height="625" loading="lazy"></div>
+          <div class="portrait__crop"><img src="assets/portrait-student-v2.webp" alt="Học sinh AGS Talent với hình bóng sư tử sau lưng" width="713" height="625" loading="lazy"></div>
         </div>
         <div class="portrait__panel-wrap">
           <div class="portrait__panel">
@@ -180,7 +200,7 @@
         <div class="sace__aside">
           <h2 class="h-section h-section--left" data-reveal>Tú tài Úc - SACE<br><span class="accent">Công nhận<br>trên toàn cầu</span></h2>
           <figure class="sace__cert" data-reveal="up" data-tilt="strong">
-            <img src="assets/sace-cert.jpg" alt="Mẫu bằng South Australian Certificate of Education" loading="lazy">
+            <img src="assets/sace-cert.webp" alt="Mẫu bằng South Australian Certificate of Education" loading="lazy">
             <span class="sace__cert-shine" aria-hidden="true"></span>
           </figure>
         </div>
@@ -233,7 +253,7 @@
         <div class="roadmap__cards" data-m-slider="timeline" data-spans='[{"label":"2,5 năm","cards":2},{"label":"0,5 năm","cards":1}]'>
           <article class="stage-card" data-reveal style="--d:0" data-step="Lớp 10">
             <div class="stage-card__media">
-              <img src="assets/roadmap-photo.jpg" alt="" loading="lazy">
+              <img src="assets/roadmap-photo.webp" alt="" loading="lazy">
               <div class="stage-card__cap stage-card__cap--blue">
                 <p class="stage-card__tag">Lớp 10</p>
                 <h3 class="stage-card__title">Xây dựng nền tảng, <br>chọn đúng thế mạnh</h3>
@@ -251,7 +271,7 @@
           </article>
           <article class="stage-card" data-reveal style="--d:1" data-step="Lớp 11–12">
             <div class="stage-card__media">
-              <img src="assets/roadmap-photo.jpg" alt="" loading="lazy">
+              <img src="assets/roadmap-photo.webp" alt="" loading="lazy">
               <div class="stage-card__cap stage-card__cap--mid">
                 <p class="stage-card__tag">Lớp 11 - lớp 12</p>
                 <h3 class="stage-card__title">Tăng tốc hoàn thành <br>bằng Tú tài úc</h3>
@@ -264,7 +284,7 @@
           </article>
           <article class="stage-card" data-reveal style="--d:2" data-step="HK2 Lớp 12">
             <div class="stage-card__media">
-              <img src="assets/roadmap-photo.jpg" alt="" loading="lazy">
+              <img src="assets/roadmap-photo.webp" alt="" loading="lazy">
               <div class="stage-card__cap stage-card__cap--yellow">
                 <p class="stage-card__tag">học kỳ 2 lớp 12</p>
                 <h3 class="stage-card__title">Chuẩn bị cho Đại học</h3>
@@ -327,7 +347,7 @@
             <p class="body-16 fees__note" data-reveal>*Chưa bao gồm học bổng.<br>Chính sách áp dụng theo điều kiện tuyển sinh của Nhà trường.</p>
           </div>
           <article class="scholarship" data-reveal="right">
-            <img class="scholarship__bg" src="assets/scholarship-kv.jpg" alt="Học sinh AGS Talent cùng hình bóng sư tử" loading="lazy">
+            <img class="scholarship__bg" src="assets/scholarship-kv.webp" alt="Học sinh AGS Talent cùng hình bóng sư tử" loading="lazy">
             <div class="scholarship__content">
               <h3 class="scholarship__title">AGS Talent Scholarship<br><span class="accent">Học bổng đến 50%</span></h3>
               <p class="scholarship__value">
@@ -358,10 +378,10 @@
             </div>
             <div class="gallery" data-gallery data-start="1">
               <div class="gallery__stage">
-                <img src="assets/sgc-2.jpg" alt="Saigon Centre Campus – không gian sinh hoạt" loading="lazy">
-                <img src="assets/sgc-1.jpg" alt="Saigon Centre Campus – mặt tiền" loading="lazy">
-                <img src="assets/sgc-3.jpg" alt="Saigon Centre Campus – phòng học" loading="lazy">
-                <img src="assets/sgc-4.jpg" alt="Saigon Centre Campus – thư viện" loading="lazy">
+                <img src="assets/sgc-2.webp" data-full="assets/sgc-2-full.webp" alt="Saigon Centre Campus – không gian sinh hoạt" loading="lazy">
+                <img src="assets/sgc-1.webp" data-full="assets/sgc-1-full.webp" alt="Saigon Centre Campus – mặt tiền" loading="lazy">
+                <img src="assets/sgc-3.webp" data-full="assets/sgc-3-full.webp" alt="Saigon Centre Campus – phòng học" loading="lazy">
+                <img src="assets/sgc-4.webp" data-full="assets/sgc-4-full.webp" alt="Saigon Centre Campus – thư viện" loading="lazy">
                 <button class="gallery__nav gallery__nav--prev" aria-label="Ảnh trước"><img src="assets/ic-arrow-left.svg" alt="" width="16" height="16"></button>
                 <button class="gallery__nav gallery__nav--next" aria-label="Ảnh tiếp theo"><img src="assets/ic-arrow-right.svg" alt="" width="16" height="16"></button>
               </div>
@@ -376,9 +396,9 @@
             </div>
             <div class="gallery" data-gallery data-start="0">
               <div class="gallery__stage">
-                <img src="assets/ws-1.jpg" alt="West Saigon Campus – lối vào" loading="lazy">
-                <img src="assets/ws-2.jpg" alt="West Saigon Campus – phòng học" loading="lazy">
-                <img src="assets/ws-3.jpg" alt="West Saigon Campus – hồ bơi" loading="lazy">
+                <img src="assets/ws-1.webp" data-full="assets/ws-1-full.webp" alt="West Saigon Campus – lối vào" loading="lazy">
+                <img src="assets/ws-2.webp" data-full="assets/ws-2-full.webp" alt="West Saigon Campus – phòng học" loading="lazy">
+                <img src="assets/ws-3.webp" data-full="assets/ws-3-full.webp" alt="West Saigon Campus – hồ bơi" loading="lazy">
                 <button class="gallery__nav gallery__nav--prev" aria-label="Ảnh trước"><img src="assets/ic-arrow-left.svg" alt="" width="16" height="16"></button>
                 <button class="gallery__nav gallery__nav--next" aria-label="Ảnh tiếp theo"><img src="assets/ic-arrow-right.svg" alt="" width="16" height="16"></button>
               </div>
@@ -407,25 +427,25 @@
               <p class="body-16">Phòng nội trú tối đa 6 học sinh, mỗi em có giường ngủ, tủ đồ cá nhân và không gian riêng. Khu vực nam – nữ được bố trí tách biệt.</p>
             </div>
             <div class="boarding__photos" data-lightbox-group="boarding">
-              <button class="photo photo--main" data-reveal="zoom"><img src="assets/dorm-main.jpg" alt="Phòng sinh hoạt chung khu nội trú" loading="lazy"></button>
+              <button class="photo photo--main" data-reveal="zoom"><img src="assets/dorm-main.webp" data-full="assets/dorm-main-full.webp" alt="Phòng sinh hoạt chung khu nội trú" loading="lazy"></button>
               <div class="boarding__thumbs">
-                <button class="photo" data-reveal style="--d:0"><img src="assets/dorm-a1.jpg" alt="Khu nội trú – phòng sinh hoạt" loading="lazy"></button>
-                <button class="photo" data-reveal style="--d:1"><img src="assets/dorm-a2.jpg" alt="Khu nội trú – hành lang" loading="lazy"></button>
-                <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-a3.jpg" alt="Khu nội trú – góc học tập" loading="lazy"></button>
+                <button class="photo" data-reveal style="--d:0"><img src="assets/dorm-a1.webp" data-full="assets/dorm-a1-full.webp" alt="Khu nội trú – phòng sinh hoạt" loading="lazy"></button>
+                <button class="photo" data-reveal style="--d:1"><img src="assets/dorm-a2.webp" data-full="assets/dorm-a2-full.webp" alt="Khu nội trú – hành lang" loading="lazy"></button>
+                <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-a3.webp" data-full="assets/dorm-a3-full.webp" alt="Khu nội trú – góc học tập" loading="lazy"></button>
               </div>
             </div>
           </div>
           <div class="boarding__col">
             <div class="boarding__grid" data-lightbox-group="boarding">
-              <button class="photo" data-reveal style="--d:0"><img src="assets/dorm-g1.jpg" alt="Nội trú – hoạt động" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:1"><img src="assets/dorm-g2.jpg" alt="Nội trú – hành lang xanh" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-g3.jpg" alt="Nội trú – góc giải trí" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:1"><img src="assets/dorm-g4.jpg" alt="Nội trú – phòng ngủ" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-g5.jpg" alt="Nội trú – phòng ăn" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:3"><img src="assets/dorm-g6.jpg" alt="Nội trú – phòng nhạc" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-g7.jpg" alt="Nội trú – góc âm nhạc" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:3"><img src="assets/dorm-g8.jpg" alt="Nội trú – phòng tắm" loading="lazy"></button>
-              <button class="photo" data-reveal style="--d:4"><img src="assets/dorm-g9.jpg" alt="Nội trú – phòng sinh hoạt" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:0"><img src="assets/dorm-g1.webp" data-full="assets/dorm-g1-full.webp" alt="Nội trú – hoạt động" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:1"><img src="assets/dorm-g2.webp" data-full="assets/dorm-g2-full.webp" alt="Nội trú – hành lang xanh" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-g3.webp" data-full="assets/dorm-g3-full.webp" alt="Nội trú – góc giải trí" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:1"><img src="assets/dorm-g4.webp" data-full="assets/dorm-g4-full.webp" alt="Nội trú – phòng ngủ" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-g5.webp" data-full="assets/dorm-g5-full.webp" alt="Nội trú – phòng ăn" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:3"><img src="assets/dorm-g6.webp" data-full="assets/dorm-g6-full.webp" alt="Nội trú – phòng nhạc" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:2"><img src="assets/dorm-g7.webp" data-full="assets/dorm-g7-full.webp" alt="Nội trú – góc âm nhạc" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:3"><img src="assets/dorm-g8.webp" data-full="assets/dorm-g8-full.webp" alt="Nội trú – phòng tắm" loading="lazy"></button>
+              <button class="photo" data-reveal style="--d:4"><img src="assets/dorm-g9.webp" data-full="assets/dorm-g9-full.webp" alt="Nội trú – phòng sinh hoạt" loading="lazy"></button>
             </div>
             <div class="soft-box soft-box--amenities" data-reveal>
               <h3 class="info-card__title">Tiện ích trong khuôn viên</h3>
@@ -576,6 +596,6 @@
     <p class="lightbox__count"></p>
   </div>
 
-  <script src="js/main.js?v=32" defer></script>
+  <script src="js/main.js?v=37" defer></script>
 </body>
 </html>

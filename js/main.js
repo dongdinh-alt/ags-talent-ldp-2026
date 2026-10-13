@@ -11,7 +11,7 @@
   const track = $('#uni-track');
   if (track) {
     const logos = Array.from({ length: 17 }, (_, i) => `assets/uni/${String(i + 1).padStart(2, '0')}.svg`);
-    const html = logos.map((src) => `<span class="marquee__item"><img src="${src}" alt="" decoding="async"></span>`).join('');
+    const html = logos.map((src) => `<span class="marquee__item"><img src="${src}" alt="" width="129" height="43" decoding="async"></span>`).join('');
     track.innerHTML = html + html.replace(/<span /g, '<span aria-hidden="true" ');
   }
 
@@ -356,6 +356,59 @@
     update();
   });
 
+  /* ---------- Card carousel (≥641px): page-wise arrows + dots; ≤640px the m-slider above takes over ---------- */
+  $$('[data-carousel]').forEach((track) => {
+    track.classList.add('is-carousel');
+    const cards = Array.from(track.children);
+    const nav = document.createElement('div');
+    nav.className = 'carousel-nav';
+    nav.innerHTML = '<button type="button" class="carousel-nav__btn" data-dir="-1" aria-label="Xem các thẻ trước"><img src="assets/ic-arrow-left.svg" alt=""></button>'
+      + '<div class="carousel-nav__dots"></div>'
+      + '<button type="button" class="carousel-nav__btn" data-dir="1" aria-label="Xem các thẻ tiếp theo"><img src="assets/ic-arrow-right.svg" alt=""></button>';
+    const anchorEl = track.nextElementSibling && track.nextElementSibling.classList.contains('m-dots') ? track.nextElementSibling : track;
+    anchorEl.insertAdjacentElement('afterend', nav);
+    const dotsWrap = $('.carousel-nav__dots', nav);
+    const [prev, next] = $$('.carousel-nav__btn', nav);
+
+    const step = () => (cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth);
+    const perView = () => Math.max(1, Math.round((track.clientWidth + 24) / step()));
+    const pageCount = () => Math.ceil(cards.length / perView());
+    const goToCard = (i) => track.scrollTo({ left: cards[Math.max(0, Math.min(i, cards.length - 1))].offsetLeft - cards[0].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+    const goToPage = (p) => goToCard(Math.min(p * perView(), cards.length - perView()));
+
+    let builtFor = 0;
+    const buildDots = () => {
+      const n = pageCount();
+      if (n === builtFor) return;
+      builtFor = n;
+      dotsWrap.innerHTML = '';
+      for (let p = 0; p < n; p++) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Trang ${p + 1} / ${n}`);
+        b.addEventListener('click', () => goToPage(p));
+        dotsWrap.appendChild(b);
+      }
+    };
+    const update = () => {
+      buildDots();
+      const max = track.scrollWidth - track.clientWidth;
+      const atStart = track.scrollLeft <= 2;
+      const atEnd = track.scrollLeft >= max - 2;
+      const first = Math.round(track.scrollLeft / step());
+      const page = atEnd ? pageCount() - 1 : Math.min(pageCount() - 1, Math.round(first / perView()));
+      $$('button', dotsWrap).forEach((d, i) => d.classList.toggle('is-active', i === page));
+      prev.disabled = atStart;
+      next.disabled = atEnd;
+    };
+    prev.addEventListener('click', () => goToCard(Math.round(track.scrollLeft / step()) - perView()));
+    next.addEventListener('click', () => goToCard(Math.round(track.scrollLeft / step()) + perView()));
+    let raf = 0;
+    track.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; update(); }); }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
   /* ---------- Lightbox ---------- */
   const lb = $('.lightbox');
   const lbImg = $('img', lb);
@@ -405,7 +458,7 @@
   });
 
   const boardingPhotos = $$('#boarding .photo');
-  const boardingList = boardingPhotos.map((b) => { const i = $('img', b); return { src: i.src, alt: i.alt }; });
+  const boardingList = boardingPhotos.map((b) => { const i = $('img', b); return { src: i.dataset.full || i.src, alt: i.alt }; });
   boardingPhotos.forEach((b, i) => b.addEventListener('click', () => openLb(boardingList, i)));
 
   /* ---------- Campus galleries ---------- */
@@ -452,7 +505,7 @@
       x0 = null;
     });
 
-    const list = slides.map((s) => ({ src: s.src, alt: s.alt }));
+    const list = slides.map((s) => ({ src: s.dataset.full || s.src, alt: s.alt }));
     slides.forEach((s) => s.addEventListener('click', () => openLb(list, index)));
 
     // Gentle autoplay while visible; pauses on hover/focus
